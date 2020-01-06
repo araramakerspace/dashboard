@@ -1,5 +1,7 @@
 # Dashboard - ARARA Makerspace
 
+## Backend
+
 ### Installation
 
 ```
@@ -20,3 +22,5 @@ $ python src/manage.py runserver
 ```
 $ python src/manage.py test
 ```
+
+## Frontend
