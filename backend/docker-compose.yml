@@ -1,0 +1,12 @@
+version: '3'
+
+
+services:
+  db_admin_api:
+    image: postgres:9.6.6
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=development
