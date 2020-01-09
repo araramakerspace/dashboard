@@ -2,17 +2,14 @@
 import os
 from os.path import dirname, join, exists, abspath
 
-import environ
-env = environ.Env()
+from decouple import config
 
-env_file = join(dirname(__file__), ".env")
-if exists(env_file):
-    environ.Env.read_env(str(env_file))
 
 BASE_DIR = dirname(dirname(abspath(__file__)))
-SECRET_KEY = env("DJANGO_SECRET_KEY")
-DEBUG = env.bool("DJANGO_DEBUG", False)
-ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", [])
+
+SECRET_KEY = config("DJANGO_SECRET_KEY", 'exemple')
+DEBUG = config("DJANGO_DEBUG", False)
+ALLOWED_HOSTS = config("DJANGO_ALLOWED_HOSTS", [])
 
 # Application definition
 INSTALLED_APPS = [
@@ -68,10 +65,10 @@ WSGI_APPLICATION = 'araramaker.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": env("DB_NAME"),
-        "USER": env("DB_USER"),
-        "PASSWORD": env("DB_PASSWORD"),
-        "HOST": env("DB_HOST"),
+        "NAME": config("DB_NAME"),
+        "USER": config("DB_USER"),
+        "PASSWORD": config("DB_PASSWORD"),
+        "HOST": config("DB_HOST"),
     }
 }
 

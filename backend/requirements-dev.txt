@@ -1,0 +1,8 @@
+-r requirements.txt
+black==19.10b0
+flake8==3.7.9
+model-bakery==1.0.2
+pre-commit==1.21.0
+pyflakes==2.1.1
+toml==0.10.0
+coverage==5.0.2
