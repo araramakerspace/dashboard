@@ -4,7 +4,7 @@ repos:
   - id: test
     name: Unit Tests
     entry: python backend/src/manage.py
-    args: [test]
+    args: [test, pages]
     pass_filenames: false
     language: system
     types: [file, python]
