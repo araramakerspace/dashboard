@@ -1,0 +1,18 @@
+sudo: required
+language: python
+    - 3.8
+services:
+- docker
+env:
+    global:
+        - DB_NAME=postgres
+        - DB_USER=postgres
+        - DB_PASSWORD=postgres
+        - DB_HOST=localhost
+        - DJANGO_SECRET_KEY=exemplo
+        - DJANGO_DEBUG=True
+before_install:
+- docker-compose -f backend/docker-compose.yml up -d
+- pip install -r backend/requirements-dev.txt
+
+script: python backend/src/manage.py test
