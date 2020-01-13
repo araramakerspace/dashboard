@@ -27,6 +27,7 @@ INSTALLED_APPS = [
 
     # Project apps
     'pages',
+    'dashboard.apps.DashboardConfig',
 ]
 
 MIDDLEWARE = [
