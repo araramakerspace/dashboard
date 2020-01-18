@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'araramaker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'database_airap',
+        'NAME': 'development',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',
