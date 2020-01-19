@@ -15,4 +15,4 @@ before_install:
 - docker-compose -f backend/docker-compose.yml up -d
 - pip install -r backend/requirements-dev.txt
 
-script: python backend/src/manage.py test
+script: python backend/manage.py test
